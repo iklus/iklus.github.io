@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CCHMC Liberty Web VR Tour</title>
+  <meta name="description" content="A Tour of Childern's Hospital Liberty Campus'">
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="room" src="Liberty_CDBI_MainEntrance.jpg">
+      </a-assets>
+      
+      <!--User-->
+      <a-entity id="user">
+        <a-camera></a-camera>
+      </a-entity>
+
+
+      <!-- Sky -->
+      <a-sky src="#room"></a-sky>
+    </a-scene>
+  </body>
+
+</html>
