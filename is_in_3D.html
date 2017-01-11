@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ivan Klus</title>
+    <meta name="description" content="Ivan Klus's Website">
+    <!-- <meta http-equiv="refresh" content="3;url=http://www.google.com/" />  -->
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- Camera with customized cursor -->
+      <a-camera id="camera" position="0 0 7" cursor-visible="true" cursor-scale="2" cursor-color="#4CC3D9" cursor-offset="2" cursor-maxdistance="100" cursor-opacity="0.5"></a-camera>
+
+      <a-entity>
+
+        <!-- I -->
+        <a-cube rotation="0 0 0" width="1" height="3" depth="1" color="#1695A3">
+           <a-animation attribute="position" to="-6 0 -1" dur="2000" fill="forwards"></a-animation> 
+        </a-cube>
+
+        <!-- V -->
+        <a-cube width="1" height="3" depth="1" color="#EB7F00">
+          <a-animation attribute="position" to="-4 0 -1" dur="2000" fill="forwards"></a-animation>
+          <a-animation attribute="rotation" to="0 0 45" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+        <a-cube width="1" height="3" depth="1"  color="#EB7F00">
+          <a-animation attribute="position" to="-2.6 0 -1" dur="2000" fill="forwards"></a-animation>
+          <a-animation attribute="rotation" to="0 0 -45" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+
+        <!-- A -->
+        <a-cube width="1" height="3" depth="1" color="#1695A3">
+          <a-animation attribute="position" to="-0.6 0 -1" dur="2000" fill="forwards"></a-animation>
+          <a-animation attribute="rotation" to="0 0 -45" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+        <a-cube width="1" height="3" depth="1" color="#1695A3">
+          <a-animation attribute="position" to="0.8 0 -1" dur="2000" fill="forwards"></a-animation>
+          <a-animation attribute="rotation" to="0 0 45" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+
+        <!-- N -->
+        <a-cube rotation="0 0 0" width="1" height="3" depth="1" color="#EB7F00">
+          <a-animation attribute="position" to="3.1 0 -1" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+        <a-cube width="1" height="3.25" depth="1" color="#EB7F00">
+          <a-animation attribute="position" to="4.35 0 -1" dur="2000" fill="forwards"></a-animation>
+          <a-animation attribute="rotation" to="0 0 45" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+        <a-cube rotation="0 0 0" width="1" height="3" depth="1" color="#EB7F00">
+          <a-animation attribute="position" to="5.6 0 -1" dur="2000" fill="forwards"></a-animation>
+        </a-cube>
+
+      </a-entity>
+
+      <!-- Sky -->
+      <a-sky color="#F3FFE2"></a-sky>
+    </a-scene>
+  </body>
+</html>
