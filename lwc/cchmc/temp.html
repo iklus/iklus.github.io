@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CCHMC VR Tour Testing</title>
+  <meta name="description" content="A Tour of Childern's Hospital Liberty Campus'">
+  <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+  <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+  <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+  <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+  <script src="js/set-image.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- Images. -->
+      <img id="room" crossorigin="anonymous" src="images/Liberty_CDBI_MainEntrance.jpg">
+      <img id="entrance" crossorigin="anonymous" src="images/CBDI_1F_Gates.jpg">
+      <img id="side" crossorigin="anonymous" src="images/Outside_G_Chess.jpg">
+    </a-assets>
+
+    <script id="ball" type="text/html">
+      <a-entity class="link"
+      geometry="primitive: sphere; radius: 3;"
+      material="color:#35BFC3"
+      position="${pos}"
+      event-set__1="_event: mousedown; scale: 1 1 1"
+      event-set__2="_event: mouseup; scale: 1.5 1.5 1.5"
+      event-set__3="_event: mouseenter; scale: 1.5 1.5 1.5"
+      event-set__4="_event: mouseleave; scale: 1 1 1"
+      set-image="on: click; target: #image-360; src: ${src}"></a-entity>
+    </script>
+
+    <!-- 360-degree image. -->
+    <a-sky id="image-360" src="#room"></a-sky>
+    <!-- Link we will build. -->
+    <a-entity template="src: #ball" data-pos="50 0 -30" data-src="#side"></a-entity>
+    <a-entity template="src: #ball" data-pos="-50 0 8" data-src="#entrance"></a-entity>
+    <a-entity template="src: #ball" data-pos="-10 0 -50" data-src="#room"></a-entity>
+    <!-- Camera + Cursor. -->
+    <a-entity camera look-controls>
+        <a-cursor id="cursor" animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150" animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+                event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black" raycaster="objects: .link"></a-cursor>
+        </a-entity>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
