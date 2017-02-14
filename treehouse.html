@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ivan Klus</title>
+    <meta name="description" content="Ivan Klus's Website">
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <script src="js/use-trapdoor.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- TREEHOUSE -->
+      <a-entity id="treehouse">
+
+        <!-- Walls -->
+        <a-entity id="#wall_W" rotation="0 0 0">
+          <!-- Full Outside Planks -->
+          <a-box position="-2.5 2 -2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 0" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <!-- Bottom Outside Planks -->
+          <a-box position="-2.5 0.75 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <!-- Top Outside Planks -->
+          <a-box position="-2.5 3.5 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <!-- Inner Planks -->
+          <a-entity id="innerWall_W">
+            <a-box position="-2.4 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 0.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 1.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 2 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 -2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+          </a-entity>
+        </a-entity>
+  
+        <a-entity id="#wall_S" rotation="0 90 0">
+          <!-- Full Outside Planks -->
+          <a-box position="-2.5 2 -2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 0" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <!-- Bottom Outside Planks -->
+          <a-box position="-2.5 0.75 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <!-- Top Outside Planks -->
+          <a-box position="-2.5 3.5 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <!-- Inner Planks -->
+          <a-entity id="innerWall_S">
+            <a-box position="-2.4 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 0.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 1.25 -1.1" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:2.25;height:0.25"></a-box>
+            <a-box position="-2.4 2 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 -2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+          </a-entity>
+        </a-entity>
+  
+        <a-entity id="#wall_N" rotation="0 -90 0">
+          <!-- Full Outside Planks -->
+          <a-box position="-2.5 2 -2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 0" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <!-- Bottom Outside Planks -->
+          <a-box position="-2.5 0.75 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <!-- Top Outside Planks -->
+          <a-box position="-2.5 3.5 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <!-- Inner Planks -->
+          <a-entity id="innerWall_N">
+            <a-box position="-2.4 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 0.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 1.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 2 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 -2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+          </a-entity>
+        </a-entity>
+  
+        <a-entity id="#wall_E" rotation="0 180 0">
+          <!-- Full Outside Planks -->
+          <a-box position="-2.5 2 -2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 0" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 2.2" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 -1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 -1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <a-box position="-2.5 2 -0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:4"></a-box>
+          <!-- Bottom Outside Planks -->
+          <a-box position="-2.5 0.75 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <a-box position="-2.5 0.75 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1.5"></a-box>
+          <!-- Top Outside Planks -->
+          <a-box position="-2.5 3.5 0.55" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.1" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <a-box position="-2.5 3.5 1.65" material="color:#403019" geometry="primitive:box;width:0.1;depth:0.5;height:1"></a-box>
+          <!-- Inner Planks -->
+          <a-entity id="innerWall_E">
+            <a-box position="-2.4 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 0.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:5;height:0.25"></a-box>
+            <a-box position="-2.4 1.25 1.1" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:2.25;height:0.25"></a-box>
+            <a-box position="-2.4 2 0" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 -2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+            <a-box position="-2.4 2 2.2" material="color:#8C6A38" geometry="primitive:box;width:0.1;depth:0.25;height:4"></a-box>
+          </a-entity>
+        </a-entity>
+  
+        <!-- Floor -->
+        <a-entity id="floor">
+          <!-- Full Planks -->
+          <a-box position="-2.2 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <a-box position="-1.65 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <a-box position="-1.1 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <a-box position="1.1 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <a-box position="1.65 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <a-box position="2.2 0 0" material="color:#403019" geometry="primitive:box;width:0.5;depth:5;height:0.1"></a-box>
+          <!-- Long Middle Planks -->
+          <a-box position="-0.55 0 -1" material="color:#403019" geometry="primitive:box;width:0.5;depth:3;height:0.1"></a-box>
+          <a-box position="0 0 -1" material="color:#403019" geometry="primitive:box;width:0.5;depth:3;height:0.1"></a-box>
+          <a-box position="0.55 0 -1" material="color:#403019" geometry="primitive:box;width:0.5;depth:3;height:0.1"></a-box>
+          <!-- Short Middle Planks -->
+          <a-box position="-0.55 0 2.25" material="color:#403019" geometry="primitive:box;width:0.5;depth:0.5;height:0.1"></a-box>
+          <a-box position="0 0 2.25" material="color:#403019" geometry="primitive:box;width:0.5;depth:0.5;height:0.1"></a-box>
+          <a-box position="0.55 0 2.25" material="color:#403019" geometry="primitive:box;width:0.5;depth:0.5;height:0.1"></a-box>
+        </a-entity>
+  
+        <!-- Trapdoor -->
+        <a-entity id="trapdoor" pivot="0 0 2" use-trapdoor="on: click; target: #trapdoor">
+          <a-entity>
+            <!-- Handle -->
+            <a-box position="0.4 0 0.75 " material="color:#403019" geometry="primitive:box;width:0.4;depth:0.4;height:0.1"></a-box>
+            <a-box position="0 0 0.875 " material="color:#403019" geometry="primitive:box;width:0.4;depth:0.15;height:0.1"></a-box>
+            <a-box position="0 0 0.625 " material="color:#403019" geometry="primitive:box;width:0.4;depth:0.15;height:0.1"></a-box> -->
+            <a-box position="-0.4 0 0.75 " material="color:#403019" geometry="primitive:box;width:0.4;depth:0.4;height:0.1"></a-box>
+            <!-- Middle -->
+            <a-box position="0 0 1.25 " material="color:#403019" geometry="primitive:box;width:1.2;depth:0.5;height:0.1" ></a-box>
+            <a-box position="0 0 1.75 " material="color:#403019" geometry="primitive:box;width:1.2;depth:0.4;height:0.1"></a-box>
+            <!-- Sides -->
+            <a-box position="-0.7 0 1.25" material="color:#8C6A38" geometry="primitive:box;width:0.2;depth:1.4;height:0.1"></a-box>
+            <a-box position="0.7 0 1.25" material="color:#8C6A38" geometry="primitive:box;width:0.2;depth:1.4;height:0.1"></a-box>
+          </a-entity>
+          <a-animation attribute="rotation" dur="3000" fill="forwards" to="90 0 0" begin="openTrapdoor"></a-animation>
+          <a-animation attribute="rotation" dur="3000" fill="forwards" to="0 0 0" begin="closeTrapdoor"></a-animation>
+        </a-entity>
+  
+        <!-- Roof and Ceiliing Beams -->
+        <a-entity id="roof">
+          <!-- Ceiliing Beams -->
+          <a-box position="0 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:0.2;depth:5;height:0.2"></a-box>
+          <a-box position="0 3.25 0" material="color:#8C6A38" geometry="primitive:box;width:5;depth:0.2;height:0.2"></a-box>
+          <!-- Roof -->
+          <a-entity position="0 5 0" rotation="0 45 0" material="color:#31353D" geometry="primitive: cone; height: 3; openEnded: true; radiusBottom: 4.5; radiusTop: 0; segmentsHeight: 1; segmentsRadial: 4"></a-entity>
+          <a-entity position="0 5 0" rotation="0 45 0" material="color:#403019" geometry="primitive: cone; height: 2.9; radiusBottom: 4.4; radiusTop: 0; segmentsHeight: 1; segmentsRadial: 4"></a-entity>
+        </a-entity>
+
+      </a-entity>
+
+
+      <!-- TREE -->
+      <a-entity id="tree" position="-5 0 -0.5">
+        <a-entity position="0 -14 0" material="color:#4C3A1E" geometry="primitive: cone; height: 2; radiusBottom: 3; radiusTop: 2; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+        <a-entity position="0 -12 0" material="color:#4C3A1E" geometry="primitive: cone; height: 2; radiusBottom: 2; radiusTop: 1.5; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+        <a-entity position="0 -6 0" material="color:#4C3A1E" geometry="primitive: cylinder; height: 12; radius: 1.5; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+        <a-entity position="0 6 0" material="color:#4C3A1E" geometry="primitive: cone; height: 12; radiusBottom: 1.5; radiusTop: 0.5; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+
+        <a-entity position="0 -1 0" rotation="0 0 90" material="color:#4C3A1E" geometry="primitive: cylinder; height: 20; radius: 1 ; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+        <a-entity position="6.5 -0.5 2" rotation="0 90 90" material="color:#4C3A1E" geometry="primitive: cylinder; height: 4; radius: 0.5 ; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+        <a-entity position="10 2 0" rotation="0 0 -90" material="color:#4C3A1E" geometry="primitive: torus; arc: 90; radius: 3; radius-tubular: 0.5 segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+
+      </a-entity>
+
+
+      <!-- Camera -->
+      <a-entity camera look-controls wasd-controls position="0 2 0">
+        <a-cursor id="cursor"></a-cursor>
+      </a-entity>
+    
+
+      <!-- Sky -->
+      <a-sky color="#92CDCF"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
