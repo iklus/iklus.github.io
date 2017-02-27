@@ -295,11 +295,11 @@
       </a-entity>
 
 
-      <!-- Ground 
-      <a-plane id="ground" position="-5 -15 -0.5" rotation="-90 0 0" material="color:#618C03; roughness: 1" height="1000" width="1000"></a-plane>
-      -->
+      <!-- Island -->
+      <a-entity position="0 -17 0" mixin="leaves" geometry="primitive: cone; height: 4; radiusBottom: 15; radiusTop: 10; segmentsHeight: 1; segmentsRadial: 16"></a-entity>
+      
       <!-- Ocean -->
-      <a-ocean color="#92E2E2" position="0 -20 0" width="100" depth="100" density="15" speed="1"></a-ocean>
+      <a-ocean color="#92E2E2" position="0 -17 0" width="200" depth="200" density="15" speed="1"></a-ocean>
 
       <!-- Sky -->
       <!-- <a-gradient-sky material="shader: gradient; topColor: 15 21 31; bottomColor: 97 79 85;"></a-gradient-sky> -->
