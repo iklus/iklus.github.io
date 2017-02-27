@@ -2,7 +2,7 @@
 
 AFRAME.registerComponent('use-trapdoor', {
   schema: {
-    on: {type: 'string'},
+    on: {type: 'string'}
   },
 
   init: function () {
