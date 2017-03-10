@@ -1,19 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Live Well VR</title>
-    <meta name="description" content="360 Image of AR Flight Attendant UI">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <!-- Images. -->
-        <img id="plane" src="images/fa_plane.jpg">
-      </a-assets>
-      
-      <!-- Sky -->
-      <a-sky src="#plane"></a-sky>
-    </a-scene>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="Live Well and Boeing VR Demonstrations">
+      <meta name="author" content="Ivan Klus @ Live Well Collaborative">
+      <link rel="icon" href="images/favicon.ico">
+
+      <title>Live Well and Boeing VR Demonstrations</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+      <div class="container">
+
+        <div class="row"> <h1>Live Well and Boeing VR Demonstrations</h1> </div>
+        <div class="row"></div>
+
+        <!-- Flight Attendent Views -->
+        <div> <h2>Flight Attendent Views</h2> </div>
+
+        <a href="vr/flight_attendant.html"> <div class="page-header"> <h3>Flight Attendent View 1</h3> </div> 
+          <img src="images\fa_plane.jpg" class="img-thumbnail" alt="VR overlay from the Flight Attendents perspective.">
+        </a>
+        <!--
+        <a href="vr/fa_1.html"> <div class="page-header"> <h3>Flight Attendent View #</h3> </div> 
+          <img src="images\fa_1.jpg" class="img-thumbnail" alt="VR overlay from the Flight Attendents perspective.">
+        </a>
+        -->
+        <a href="vr/fa_2.html"> <div class="page-header"> <h3>Flight Attendent View 2</h3> </div> 
+          <img src="images\fa_2.jpg" class="img-thumbnail" alt="VR overlay from the Flight Attendents perspective.">
+        </a>
+        <div class="row"></div>
+
+        <!-- Passenger Views -->
+        <div> <h2>Passenger Views</h2> </div>
+
+        <a href="vr/pass_flight_info.html"> <div class="page-header"> <h3>Passenger Flight Info View</h3> </div>
+          <img src="images/pass_flight_info.jpg" class="img-thumbnail" alt="VR overlay from the Passenger's perspective.">
+        </a>
+        <a href="vr/pass_safety.html"> <div class="page-header"> <h3>Passenger Safety Demo View</h3> </div> 
+          <img src="images/pass_safety_demo.jpg" class="img-thumbnail" alt="VR overlay from the Passenger's perspective.">
+        </a>
+        <a href="vr/pass_entertainment.html"> <div class="page-header"> <h3>Passenger Entertainment View</h3> </div> 
+          <img src="images/pass_entertainment.jpg" class="img-thumbnail" alt="VR overlay from the Passenger's perspective."> 
+        </a>
+        <a href="vr/pass_shop.html"> <div class="page-header"> <h3>Passenger Shopping View</h3> </div> 
+          <img src="images/pass_shop.jpg" class="img-thumbnail" alt="VR overlay from the Passenger's perspective."> 
+        </a>
+        <a href="vr/pass_food.html"> <div class="page-header"> <h3>Passenger Food Ordering View</h3> </div> 
+          <img src="images/pass_food.jpg" class="img-thumbnail" alt="VR overlay from the Passenger's perspective."> 
+        </a>
+        <div class="row"></div>
+
+
+    </div>
   </body>
 </html>
