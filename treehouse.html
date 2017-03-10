@@ -154,7 +154,7 @@
         </a-entity>
   
         <!-- Trapdoor -->
-        <a-entity id="trapdoor" pivot="0 0 2" use-trapdoor="on: click;">
+        <a-entity id="trapdoor" class="collidable" pivot="0 0 2" use-trapdoor="on: click;">
           <a-entity>
             <!-- Handle -->
             <a-box position="0.4 0 0.75 " mixin="outWood" geometry="primitive:box;width:0.4;depth:0.4;height:0.1"></a-box>
@@ -185,7 +185,7 @@
         <!-- Interior -->
         <a-entity id="interior">
           <!-- Light Bulb -->
-          <a-entity id="lightBulb" use-light="on: click; target: #pointLight">
+          <a-entity id="lightBulb" class="collidable" use-light="on: click; target: #pointLight">
             <a-entity position="0 2.8 0" material="color:#f7f25e; opacity: 0.9" geometry="primitive: sphere; radius: 0.1;  segmentsWidth: 32; segmentsHeight: 32"></a-entity>
             <a-entity position="0 2.9 0" material="color:#f7f25e; opacity: 0.9" geometry="primitive: cone; height: 0.15; radiusBottom: 0.1; radiusTop: 0.05; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
             <a-entity position="0 3 0" material="color:#aba898" geometry="primitive: cylinder; height: 0.1; radius: 0.05; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
@@ -193,7 +193,7 @@
             <a-entity position="0 3.1 0" material="color:#000000" geometry="primitive: cylinder; height: 0.1; radius: 0.01; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
           </a-entity>
           <!-- Clock -->
-          <a-entity id="clock" position="2.45 2.6 1.5" rotation="0 -90 0" scale="0.75 0.75 0.75">
+          <a-entity id="clock" class="collidable" position="2.45 2.6 1.5" rotation="0 -90 0" scale="0.75 0.75 0.75">
             <a-entity position="0 0 0" rotation="90 0 0" material="color:#000000" geometry="primitive: cylinder; height: 0.1; radius: 0.5; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
             <a-entity position="0 0 0.05" rotation="90 0 0" material="color:#FFFFFF" geometry="primitive: cylinder; height: 0.01; radius: 0.4; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
             <a-entity position="0 0 0.06" rotation="90 0 0" material="color:#000000" geometry="primitive: cylinder; height: 0.01; radius: 0.05; segmentsHeight: 1; segmentsRadial: 32"></a-entity>
@@ -308,8 +308,8 @@
       <!-- Camera -->
       <a-entity id="player" position="0 2 0">
       <a-entity camera look-controls wasd-controls>
-        <a-entity position="0 0 -1"
-                  geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.03;"
+        <a-entity position="0 0 -0.1"
+                  geometry="primitive: ring; radiusOuter: 0.05; radiusInner: 0.03;"
                   material="color: orange; shader: flat"
                   cursor="maxDistance: 30; fuse: true"
                   raycaster="objects: .collidable">
