@@ -5,11 +5,6 @@
   <title>Loft VR Tour</title>
   <meta name="description" content="Loft'">
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-  <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-  <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-  <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-  <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-  <!-- My scripts -->
 </head>
 
 <body>
@@ -22,33 +17,22 @@
     </a-assets>
 
     <!-- Videos -->
-    <a-entity position="-8.5 0 -2" rotation="0 -45 0" scale="1 1 1" visible="true">
-      <a-entity position="2 2.3 -0.5" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video"></a-entity>
-      <a-entity position="-2 2.3 -0.5" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video"></a-entity>
+    <a-entity position="-0.344 1.604 -1.537" rotation="0 9 0" scale="0.75 0.75 1" visible="true">
+      <a-entity position="4.8 0 -0.165" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video"></a-entity>
+      <a-entity position="-2 0 -0.5" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video"></a-entity>
+      <a-entity position="-4.791 0 0.076" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video"></a-entity>
     </a-entity>
 
-    <a-entity obj-model="obj: #subway-obj; mtl: #subway-mtl"></a-entity>
-
-    <!-- Floor -->
-    <a-entity position="0 -0.25 0" scale="1 1 1" geometry="primitive:box;height:0.5;width:100;depth:100;" material="color:tan;shader:flat"></a-entity>
+    <a-entity obj-model="obj: #subway-obj; mtl: #subway-mtl" position="0 1.359 0" rotation="-3 0 -1" scale="10 10 10"></a-entity>
 
     <!-- 360-degree image. -->
-    <a-sky material="color:white;"></a-sky>
+    <a-sky material="color:gray;"></a-sky>
 
     <!-- Camera and Cursor (Player starts off backwards) -->
-    <a-entity id="player" position="-3 2.25 2" rotation="0 -90 0">
+    <a-entity id="player" position="0 1.5 0" rotation="0 -90 0">
       <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
-        <!--<a-entity position="0 0 -3"
-                  scale="1 1 1"
-                  geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03; thetaStart: 90;"
-                  material="color: white; shader: standard"
-                  cursor="maxDistance: 100; fuse: true"
-                  raycaster="interval: 500; objects: .collidable">
-          <a-animation begin="click" easing="ease" attribute="geometry.thetaLength" fill="backwards" from="0" to="360" dur="500"></a-animation>
-          <a-animation begin="mouseleave" easing="ease" attribute="geometry.thetaLength" fill="backwards" to="360" dur="0"></a-animation>
-          <a-animation begin="cursor-fusing" easing="ease-in" attribute="geometry.thetaLength" fill="forwards" from="360" to="0"></a-animation>
-        </a-entity>-->
 
   </a-scene>
 </body>
+
 </html>
