@@ -13,25 +13,25 @@
     <a-assets>
         <a-asset-item id="subway-obj" src="/models/subway_car/subway_car.obj"></a-asset-item>
         <a-asset-item id="subway-mtl" src="/models/subway_car/subway_car.mtl"></a-asset-item>
-      <video id="pg_subway_video" src="video/pg_subway.mp4"></video>
+      <video id="pg_subway_video" autoplay loop="true" src="video/pg_subway.mp4"></video>
     </a-assets>
 
     <!-- Videos -->
     <a-entity position="-0.344 1.604 -1.537" rotation="0 9 0" scale="0.75 0.75 1" visible="true">
-      <a-entity position="4.8 0 -0.165" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
-      <a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
-      <a-entity position="-4.791 0 0.076" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
+      <a-video position="4.8 0 -0.165" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
+      <a-video position="0 0 0" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
+      <a-video position="-4.791 0 0.076" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
     </a-entity>
     <a-entity position="0.353 1.604 1.894" rotation="0 189 0" scale="0.75 0.75 1" visible="true">
-        <a-entity position="4.8 0 -0.165" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
-        <a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
-        <a-entity position="-4.791 0 0.076" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" material="src: #pg_subway_video" autoplay loop="true"></a-entity>
+        <a-video position="4.8 0 -0.165" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
+        <a-video position="0 0 0" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
+        <a-video position="-4.791 0 0.076" rotation="0 0 0" scale="1 1 1" geometry="primitive:plane;height:1.5;width:3;" src="#pg_subway_video"></a-video>
       </a-entity>
 
     <a-entity obj-model="obj: #subway-obj; mtl: #subway-mtl" position="0 1.359 0" rotation="-3 0 -1" scale="10 10 10"></a-entity>
 
     <!-- 360-degree image. -->
-    <a-sky material="color:brown;"></a-sky>
+    <a-sky color="cyan"></a-sky>
 
     <!-- Camera and Cursor (Player starts off backwards) -->
     <a-entity id="player" position="0 1.5 0" rotation="0 -90 0">
