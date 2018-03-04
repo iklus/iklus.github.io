@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoelace (Responsive Web VR)</title>
+    <meta name="description" content="HShoelace (Responsive Web VR)">
+    <!--<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>-->
+    <script src="https://rawgit.com/ngokevin/aframe/animationbugless/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.0.0-beta8/dist/aframe-animation-component.js"></script>    <script src="https://unpkg.com/aframe-animation-timeline-component/dist/aframe-animation-timeline-component.min.js"></script>
+    <script src="js/headband.js"></script>
+  </head>
+  <body>
+    <a-scene animation-timeline__1="timeline: #animTimeline; loop: true" cursor="rayOrigin: mouse" vr-mode-ui="enabled: false">
+      <a-assets>
+        <!--<img id="menu_icon" src="images/menu_icon.png"></img>-->
+        <img id="uc_logo" src="images/uc_logo.png"></img>
+      </a-assets>
+
+      <a-timeline id="animTimeline">
+        <a-timeline-animation select="#polls" name="cometo"></a-timeline-animation>
+   
+        <!--<a-timeline-group>
+          <a-timeline-animation select="a-entity[mixin~=box]" name="fadein"></a-timeline-animation>
+          <a-timeline-animation select="a-entity[mixin~=box]" name="scale"></a-timeline-animation>
+          <a-timeline-animation select="a-entity[mixin~=box]" name="color"></a-timeline-animation>
+        </a-timeline-group>-->
+      </a-timeline>
+
+      <a-mixin id="poll"
+        animation__cometo="property: position; to: 0 0 0; dur: 5000; easing: linear; autoplay: false"
+      ></a-mixin>
+
+      <a-mixin id="cy"
+        geometry="primitive:cylinder;radius:0.5;height:6;"
+        material="color:#FFC65D"
+      ></a-mixin>
+
+
+      <a-entity id="polls" mixin="poll" position="0 0 -10">
+        <a-entity position="0 3 0">
+          <a-entity mixin="cy" position="15 0 2"></a-entity>
+          <a-entity mixin="cy" position="4 0 1"></a-entity>
+          <a-entity mixin="cy" position="1 0 0"></a-entity>
+          <a-entity mixin="cy" position="-3 0 -1"></a-entity>
+          <a-entity mixin="cy" position="-1 0 4"></a-entity>
+          <a-entity mixin="cy" position="5 0 3"></a-entity>
+          <a-entity mixin="cy" position="-6 0 1"></a-entity>
+          <a-entity mixin="cy" position="2 0 -3"></a-entity>
+          <a-entity mixin="cy" position="-10 0 3"></a-entity>
+          <a-entity mixin="cy" position="10 0 -2"></a-entity>
+          <a-entity mixin="cy" position="-14 0 -1"></a-entity>
+          <a-entity mixin="cy" position="9 0 1"></a-entity>
+          <a-entity mixin="cy" position="-19 0 1"></a-entity>
+          <a-entity mixin="cy" position="15 0 1"></a-entity>
+        </a-entity>
+        <a-entity position="0 3 -10">
+          <a-entity mixin="cy" position="15 0 2"></a-entity>
+          <a-entity mixin="cy" position="4 0 1"></a-entity>
+          <a-entity mixin="cy" position="1 0 0"></a-entity>
+          <a-entity mixin="cy" position="-3 0 -1"></a-entity>
+          <a-entity mixin="cy" position="-1 0 4"></a-entity>
+          <a-entity mixin="cy" position="5 0 3"></a-entity>
+          <a-entity mixin="cy" position="-6 0 1"></a-entity>
+          <a-entity mixin="cy" position="2 0 -3"></a-entity>
+          <a-entity mixin="cy" position="-10 0 3"></a-entity>
+          <a-entity mixin="cy" position="10 0 -2"></a-entity>
+          <a-entity mixin="cy" position="-14 0 -1"></a-entity>
+          <a-entity mixin="cy" position="9 0 1"></a-entity>
+          <a-entity mixin="cy" position="-19 0 1"></a-entity>
+          <a-entity mixin="cy" position="15 0 1"></a-entity>
+        </a-entity>
+        <a-entity position="0 3 -20">
+          <a-entity mixin="cy" position="15 0 2"></a-entity>
+          <a-entity mixin="cy" position="4 0 1"></a-entity>
+          <a-entity mixin="cy" position="1 0 0"></a-entity>
+          <a-entity mixin="cy" position="-3 0 -1"></a-entity>
+          <a-entity mixin="cy" position="-1 0 4"></a-entity>
+          <a-entity mixin="cy" position="5 0 3"></a-entity>
+          <a-entity mixin="cy" position="-6 0 1"></a-entity>
+          <a-entity mixin="cy" position="2 0 -3"></a-entity>
+          <a-entity mixin="cy" position="-10 0 3"></a-entity>
+          <a-entity mixin="cy" position="10 0 -2"></a-entity>
+          <a-entity mixin="cy" position="-14 0 -1"></a-entity>
+          <a-entity mixin="cy" position="9 0 1"></a-entity>
+          <a-entity mixin="cy" position="-19 0 1"></a-entity>
+          <a-entity mixin="cy" position="15 0 1"></a-entity>
+        </a-entity>
+        <a-entity position="0 3 -30">
+          <a-entity mixin="cy" position="15 0 2"></a-entity>
+          <a-entity mixin="cy" position="4 0 1"></a-entity>
+          <a-entity mixin="cy" position="1 0 0"></a-entity>
+          <a-entity mixin="cy" position="-3 0 -1"></a-entity>
+          <a-entity mixin="cy" position="-1 0 4"></a-entity>
+          <a-entity mixin="cy" position="5 0 3"></a-entity>
+          <a-entity mixin="cy" position="-6 0 1"></a-entity>
+          <a-entity mixin="cy" position="2 0 -3"></a-entity>
+          <a-entity mixin="cy" position="-10 0 3"></a-entity>
+          <a-entity mixin="cy" position="10 0 -2"></a-entity>
+          <a-entity mixin="cy" position="-14 0 -1"></a-entity>
+          <a-entity mixin="cy" position="9 0 1"></a-entity>
+          <a-entity mixin="cy" position="-19 0 1"></a-entity>
+          <a-entity mixin="cy" position="15 0 1"></a-entity>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+  
+      <a-sky color="cyan"></a-sky>
+
+      <a-entity id="player" position="0 2 0" rotation="0 0 0">
+        <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
+          <!-- Hub Menu UI -->
+          <a-entity id="menuBar" headband="side:top;away:1;sections:4" material="shader: flat; color: purple;">
+            <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
+            <a-image class="hb-2d-menu" src="#uc_logo" position="0 0 0.01" scale="0.6 0.2 1">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="0.72 0.24 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="0.72 0.24 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="0.6 0.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="0.6 0.2 1"></a-animation>
+            </a-image>
+            <a-entity class="hb-2d-menu" material="shader: flat; color: yellow" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1;">
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb-2d-menu" material="shader: flat; color: green" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb-2d-menu" material="shader: flat; color: blue" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+           
+          </a-entity>
+          <a-entity id="menuBar" headband="side:bottom;away:1;sections:4;prefix:hb1" material="shader: flat; color: purple;">
+            <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
+            <a-entity class="hb1-2d-menu" material="shader: flat; color: red" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1;">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+          </a-entity>
+            <a-entity class="hb1-2d-menu" material="shader: flat; color: yellow" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1;">
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb1-2d-menu" material="shader: flat; color: green" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb1-2d-menu" position="0 0 0.01">
+              <a-entity scale="2 2 1" text="value:Hello World;align:center;" color="blue">
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="2.4 2.4 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="2.4 2.4 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="2 2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="2 2 1"></a-animation>
+              </a-entity>
+            </a-entity>
+           
+          </a-entity>
+
+        </a-entity>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
