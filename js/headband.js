@@ -49,7 +49,7 @@ AFRAME.registerComponent('headband', {
     } else if (data.side === "top") {
       this.sideMultiplier = 1;
     } else {
-      console.error("Incorrect side entered");
+      console.error("Invalid side entered");
     }
 
     data.menuHeight = (data.away/10)*data.heightMultiplier;

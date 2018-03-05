@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ivan Klus</title>
+    <meta name="description" content="HShoelace (Responsive Web VR)">
+    <!--<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>-->
+    <script src="https://rawgit.com/ngokevin/aframe/animationbugless/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.0.0-beta8/dist/aframe-animation-component.js"></script>
+    <script src="https://unpkg.com/aframe-animation-timeline-component/dist/aframe-animation-timeline-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script>
+    <script src="js/headband.js"></script>
+  </head>
+  <body>
+    <a-scene animation-timeline__1="timeline: #animTimeline; loop: true" cursor="rayOrigin: mouse" vr-mode-ui="enabled: false">
+      <a-assets>
+        <!-- Forest Area Models -->
+        <a-asset-item id="f1-obj" src="/models/forest_areas/f1/model.obj"></a-asset-item>
+        <a-asset-item id="f1-mtl" src="/models/forest_areas/f1/materials.mtl"></a-asset-item>
+        <a-asset-item id="f2-obj" src="/models/forest_areas/f2/model.obj"></a-asset-item>
+        <a-asset-item id="f2-mtl" src="/models/forest_areas/f2/materials.mtl"></a-asset-item>
+        <a-asset-item id="f3-obj" src="/models/forest_areas/f3/model.obj"></a-asset-item>
+        <a-asset-item id="f3-mtl" src="/models/forest_areas/f3/materials.mtl"></a-asset-item>
+        <a-asset-item id="f4-obj" src="/models/forest_areas/f4/model.obj"></a-asset-item>
+        <a-asset-item id="f4-mtl" src="/models/forest_areas/f4/materials.mtl"></a-asset-item>
+        <a-asset-item id="f5-obj" src="/models/forest_areas/f5/model.obj"></a-asset-item>
+        <a-asset-item id="f5-mtl" src="/models/forest_areas/f5/materials.mtl"></a-asset-item>
+        <a-asset-item id="f6-obj" src="/models/forest_areas/f6/model.obj"></a-asset-item>
+        <a-asset-item id="f6-mtl" src="/models/forest_areas/f6/materials.mtl"></a-asset-item>
+        <a-asset-item id="f7-obj" src="/models/forest_areas/f7/model.obj"></a-asset-item>
+        <a-asset-item id="f7-mtl" src="/models/forest_areas/f7/materials.mtl"></a-asset-item>
+        <a-asset-item id="f8-obj" src="/models/forest_areas/f8/model.obj"></a-asset-item>
+        <a-asset-item id="f8-mtl" src="/models/forest_areas/f8/materials.mtl"></a-asset-item>
+        <!-- Tree Template -->
+        <script id="treeTemplate" type="text/x-nunjucks-template">
+          <a-entity geometry="primitive:cylinder;radius:0.5;height:6;"
+            material="color:#89725B"
+            position="0 3 0"></a-entity>
+            <a-entity geometry="primitive:dodecahedron; radius:2.5;"
+            material="color:#677E52"
+            position="0 5 0"></a-entity>
+        </script>
+        <script id="fTemplate" type="text/x-nunjucks-template">
+          <a-entity obj-model="obj: #f8-obj; mtl: #f8-mtl" position="-7.5 0.77 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f7-obj; mtl: #f7-mtl" position="-5.5 0.24 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f4-obj; mtl: #f4-mtl" position="-3.5 0.2 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f2-obj; mtl: #f2-mtl" position="-1.5 1.18 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f5-obj; mtl: #f5-mtl" position="1.5 0.73 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f6-obj; mtl: #f6-mtl" position="3.5 0.19 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f3-obj; mtl: #f3-mtl" position="5.5 0.44 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+          <a-entity obj-model="obj: #f1-obj; mtl: #f1-mtl" position="7.5 0.4 0" rotation="0 180 0" scale="5 5 5"></a-entity>
+        </script>
+        <img id="ivan_logo" src="images/ivankl-us_logo.png"></img>
+      </a-assets>
+
+      <!-- Animation Timeline -->
+      <a-timeline id="animTimeline">
+        <a-timeline-animation select="#polls" name="cometo"></a-timeline-animation>
+      </a-timeline>
+
+      <!-- Forest Animation Mixin -->
+      <a-mixin id="forest"
+        animation__cometo="property: position; to: 0 0 0; dur: 2000; easing: linear; autoplay: false"
+      ></a-mixin>
+
+      <a-entity id="polls" mixin="forest" position="0 0 -3">
+        <a-entity template="src: #fTemplate" position="0 0 0"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -3"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -6"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -9"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -12"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -15"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -18"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -21"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -24"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -27"></a-entity>
+        <a-entity template="src: #fTemplate" position="0 0 -30"></a-entity>
+      </a-entity>
+    </a-entity>
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#B7CA79"></a-plane>
+      <a-plane position="0 0.01 0" rotation="-90 0 0" width="1.5" height="100" color="#F6E8B1"></a-plane>
+      
+  
+      <a-sky color="cyan"></a-sky>
+
+      <a-entity id="player" position="0 2 0" rotation="0 0 0">
+        <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
+          <!-- Hub Menu UI -->
+          <a-entity id="menuBar" headband="side:top;away:1;sections:4" material="shader:flat;color:#89725B;">
+            <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
+            <a-image class="hb-2d-menu" src="#ivan_logo" position="0 0 0.01" scale="1 1 1">
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-image>
+            <a-entity class="hb-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Ivan Klus;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+              </a-entity>
+            <a-entity class="hb-2d-menu"></a-entity>
+            <a-entity class="hb-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Contact;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+              </a-entity>
+           
+          </a-entity>
+          <a-entity id="menuBar" headband="side:bottom;away:1;sections:4;prefix:hb1" material="shader:flat;color:#89725B;">
+            <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
+            <a-entity class="hb1-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:About Me;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb1-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Projects;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+            <a-entity class="hb1-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Co-ops;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+                <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+              </a-entity>
+            <a-entity class="hb1-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Resume;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+              <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+            </a-entity>
+
+           
+          </a-entity>
+
+        </a-entity>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
