@@ -24,8 +24,8 @@ var degreesToHTML = function (angleArray) {
   for (i=1; i<angleArray.length; i++) {
     var x = l * Math.cos(angleArray[i] * (Math.PI / 180))
     var z = l * Math.sin(angleArray[i] * (Math.PI / 180))
-    inHTML += '<a-entity position="' + x + ' 0 ' + z + '">';
-    var randomNum = Math.floor(Math.random() * Math.floor(models.length));
+    inHTML += '<a-entity position="' + x + ' 0 ' + z + '" rotation="0 ' + Math.floor(Math.random() * 360) + ' 0">';
+    var randomNum = Math.floor(Math.random() * models.length);
     inHTML += models[randomNum];
     inHTML += '</a-entity>';
   }

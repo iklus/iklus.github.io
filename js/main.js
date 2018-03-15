@@ -508,7 +508,13 @@
 }));
 
 
-
+/*!
+ * Slide Manager
+ * by Ivan Klus and templatemo
+ *
+ * More info:
+ * http://www.templatemo.com/tm-503-newline
+ */
 jQuery(document).ready(function($){
   var slidesWrapper = $('.cd-hero-slider');
 
@@ -521,9 +527,6 @@ jQuery(document).ready(function($){
       visibleSlidePosition = 0,
       autoPlayId,
       autoPlayDelay = 5000;
-
-    //upload videos (if not on mobile devices)
-    uploadVideo(slidesWrapper);
 
     //autoplay slider
     setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
@@ -541,7 +544,6 @@ jQuery(document).ready(function($){
         // if it's not already selected
         var selectedPosition = selectedItem.index(),
           activePosition = slidesWrapper.find('li.selected').index();
-        
         if( activePosition < selectedPosition) {
           nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
         } else {
@@ -565,7 +567,7 @@ jQuery(document).ready(function($){
     });
 
     container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
-    checkVideo(visibleSlide, container, n);
+    changeAframe(visibleSlide, container, n);
   }
 
   function prevSlide(visibleSlide, container, pagination, n){
@@ -574,7 +576,7 @@ jQuery(document).ready(function($){
     });
 
     container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
-    checkVideo(visibleSlide, container, n);
+    changeAframe(visibleSlide, container, n);
   }
 
   function updateSliderNavigation(pagination, n) {
@@ -602,28 +604,8 @@ jQuery(document).ready(function($){
     updateSliderNavigation(sliderNav, visibleSlidePosition);
   }
 
-  function uploadVideo(container) {
-    container.find('.cd-bg-video-wrapper').each(function(){
-      var videoWrapper = $(this);
-      if( videoWrapper.is(':visible') ) {
-        // if visible - we are not on a mobile device 
-        var videoUrl = videoWrapper.data('video'),
-          video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
-        video.appendTo(videoWrapper);
-        // play video if first slide
-        if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
-      }
-    });
-  }
-
-  function checkVideo(hiddenSlide, container, n) {
-    //check if a video outside the viewport is playing - if yes, pause it
-    var hiddenVideo = hiddenSlide.find('video');
-    if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
-
-    //check if the select slide contains a video element - if yes, play the video
-    var visibleVideo = container.children('li').eq(n).find('video');
-    if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
+  function changeAframe(hiddenSlide, container, n) {
+    $('#player')[0].setAttribute('position', {x: 0, y: (0.1+(n*0.4)), z: 0});
   }
 
   function updateNavigationMarker(marker, n) {
