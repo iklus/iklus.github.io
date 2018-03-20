@@ -83,11 +83,11 @@ http://www.templatemo.com/tm-503-newline
             <nav>
               <span class="cd-marker item-1"></span>
               <ul>
-                <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>About Us</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/featured-icon.png"></div><h6>Featured</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Projects</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/contact-icon.png"></div><h6>Contact Us</h6></a></li>
+                <li id="navIcon1" class="selected"><a href="#0"><div class="image-icon"><img src="img/logo2-icon-sm.png"></div><h6>Welcome</h6></a></li>
+                <li id="navIcon2"><a href="#0"><div class="image-icon"><img src="img/job-icon-sm.png"></div><h6>Work</h6></a></li>
+                <li id="navIcon3"><a href="#0"><div class="image-icon"><img src="img/code-icon-sm.png"></div><h6>Projects</h6></a></li>
+                <li id="navIcon4"><a href="#0"><div class="image-icon"><img src="img/vr-icon-sm.png"></div><h6>VR & AR</h6></a></li>
+                <li id="navIcon5"><a href="#0"><div class="image-icon"><img src="img/contact-icon-sm.png"></div><h6>Contact</h6></a></li>
               </ul>
             </nav> 
           </div> <!-- .cd-slider-nav -->
@@ -97,31 +97,19 @@ http://www.templatemo.com/tm-503-newline
             <li class="selected">
               <div class="heading">
                 <h1>Welcome</h1>
-                <span>To My Exploration of The Web and VR</span>
+                <span>To My Exploration of VR and the Web</span>
               </div>
               <div class="cd-full-width first-slide">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="content second-content">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <h4>Ivan the Great or Ivan the Terrible?</h4>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 offset-md-3 align-items-center">
-                            <img class="rounded" src="images/mugshot.jpg">
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12">
-                            <br>
-                            <p>Newline is free CSS template by templatemo. Credits go to <a href="https://videos.pexels.com/videos/busy-street-in-the-city-1089" target="_blank">Pexels.com</a> for a video background and <a href="http://unsplash.com" target="_blank">Unsplash</a> for images. Please tell your friends about templatemo and this is a way to help back. Thank you. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum convallis mi. In dapibus auctor dictum donec mattis quis eros ultricies feugiat.</p>
-                            <div class="primary-button">
-                              <a href="#">Discover More</a>
-                            </div>
-                          </div>
+                      <div class="content first-content">
+                        <h4>Ivan the Great or Ivan the Terrible?</h4>
+                        <img class="rounded" src="images/mugshot.jpg">
+                        <br></br>
+                        <p>I don’t like to talk about myself very much, so I am going to keep this brief.  My name is Ivan Klus, as you probably already know, and I am a front-end web and virtual reality developer.  I have had the privilege of doing VR work with multiple prominent companies including Boeing and Cincinnati Children's Hospital.  For Boeing, I developed <a href="https://imgur.com/a/3rnk4">Boeing Onboard (BO)</a> in Unity.  BO is an augmented reality assistant and interface that provides passengers with curated info and entertainment.  Currently, it is a top 3 finalist for a 2018 <a href="http://www.crystal-cabin-award.com/">Crystal Cabin Award</a>.  For Cincinnati Children's Hospital, I constructed an <a href="http://ivankl.us/cchmc_liberty_virtual_tour/">online virtual tour</a> of their Proton Therapy Center and surrounding campus.  The webVR tour included the ability to go on narrated premade tours, as well as the ability create custom tours you could share via link.  For more information about my projects switch to the Projects page or click <a href="#0">here</a>.</p>
+                        <div class="primary-button">
+                          <a href="#" onclick='$("#navIcon4").trigger("click");'>Projects</a>
                         </div>
                       </div> 
                     </div> 
@@ -132,8 +120,8 @@ http://www.templatemo.com/tm-503-newline
 
             <li>
               <div class="heading">
-                <h1>About Us</h1>
-                <span>Get More Info About Our Agency</span> 
+                <h1>Work</h1>
+                <span>My Past and Present Work Experience</span> 
               </div>
               <div class="cd-half-width second-slide">   
                 <div class="container">
@@ -177,8 +165,8 @@ http://www.templatemo.com/tm-503-newline
 
             <li>
               <div class="heading">
-                <h1>Featured</h1>
-                <span>We produce featured product every week</span> 
+                <h1>Projects</h1>
+                <span>An Assortment of My Projects</span> 
               </div>
               <div class="cd-half-width third-slide">
                 <div class="container">
@@ -208,6 +196,32 @@ http://www.templatemo.com/tm-503-newline
                             </div>
                           </div>
                         </div>
+                        <div class="fourth-content row">
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg"></a>
+                            </div>
+                            <div class="col-md-3 project-item">
+                              <a href="img/item-08.jpg" data-lightbox="image-1"><img src="img/project-item-08.jpg"></a>
+                            </div>
+                          </div>
                       </div>
                     </div>
                   </div>                  
@@ -217,8 +231,8 @@ http://www.templatemo.com/tm-503-newline
 
             <li>
               <div class="heading">
-                <h1>Our projects</h1>
-                <span>Here you can check our recent projects</span> 
+                <h1>VR & AR</h1>
+                <span>Current Mixed Reality Trends</span> 
               </div>
               <div class="cd-half-width fourth-slide">
                 <div class="container">
@@ -260,8 +274,8 @@ http://www.templatemo.com/tm-503-newline
 
             <li>
               <div class="heading">
-                <h1>Contact us</h1>
-                <span>You'll be responded within 48 hrs</span> 
+                <h1>Contact</h1>
+                <span>I'll respond to you within 48 hrs</span> 
               </div>
               <div class="cd-half-width fivth-slide">
                 <div class="container">
@@ -271,44 +285,41 @@ http://www.templatemo.com/tm-503-newline
                         <div class="row">
                           <div class="col-md-4">
                             <div class="left-info">
-                              <p>Maecenas imperdiet sagittis lacus, ut consequat velit iaculis id. Praesent eu consequat urna. Morbi justo dolor, ornare sed lorem et, auctor iaculis ligula.
+                              <p>You can contact me by filling out this form, emailing me directly at <a href="mailto:klusit@mail.uc.edu">klusit@mail.uc.edu</a>, or through Github, LinkedIn, and the other social media sites listed below.
                               <br><br>
-                              <em>3344 Donec mollis libero<br>at metus luctus 10110</em>
+                              <em>3468 Craig Ave.<br>Cincinnati, OH 45211</em>
                               </p>
                               <ul class="social-icons">
-                                <i><a href="#"><i class="fa fa-facebook"></i></a></i>
-                                <i><a href="#"><i class="fa fa-twitter"></i></a></i>
-                                <i><a href="#"><i class="fa fa-linkedin"></i></a></i>
-                                <i><a href="#"><i class="fa fa-rss"></i></a></i>
-                                <i><a href="#"><i class="fa fa-behance"></i></a></i>
+                                <i><a href="https://github.com/iklus"><i class="fa fa-github"></i></a></i>
+                                <i><a href="https://www.linkedin.com/in/iklus"><i class="fa fa-linkedin"></i></a></i>
+                                <i><a href="https://www.facebook.com/ivanklus"><i class="fa fa-facebook"></i></a></i>
+                                <i><a href="https://twitter.com/klusenator"><i class="fa fa-twitter"></i></a></i>
                               </ul>
                             </div>
                           </div>
                           <div class="col-md-8">
-                            <div class="row">
-                              <form id="contact" action="" method="post">
-                                <div class="col-md-6">
-                                  <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                  <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email" required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
-                                  </fieldset>
-                                </div>
-                              </form>
-                            </div>
+                            <form id="contact" action="" method="post">
+                              <div class="col-md-6">
+                                <fieldset>
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                                </fieldset>
+                              </div>
+                              <div class="col-md-6">
+                                <fieldset>
+                                  <input name="email" type="email" class="form-control" id="email" placeholder="Email" required="">
+                                </fieldset>
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                                </fieldset>
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                </fieldset>
+                              </div>
+                            </form>
                           </div>
                         </div>
                       </div>
