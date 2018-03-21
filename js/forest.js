@@ -32,3 +32,25 @@ var degreesToHTML = function (angleArray) {
   return inHTML;
 }
 forestElement.innerHTML = degreesToHTML(inCircleAngles) + degreesToHTML(outCircleAngles);
+
+
+// Function to move the VR backgound to the front and pause rotation
+var vrToFront = function() {
+  var aframe = $(".aframe");
+  aframe.css( "zIndex", "10" );
+  $("a-scene").get(0).setAttribute("embedded", false);
+  $("#forest").get(0).emit("pauseAnim");
+  $("#ambientLight").get(0).setAttribute('light', {intensity: 0.8});
+  $("#return_button").css("display", "inline");
+}
+
+
+// Function to move the VR backgound to the front and pause rotation
+var vrToBack = function() {
+  var aframe = $(".aframe");
+  aframe.css( "zIndex", "-100" );
+  $("a-scene").get(0).setAttribute("embedded", true);
+  $("#forest").get(0).emit("resumeAnim");
+  $("#ambientLight").get(0).setAttribute('light', {intensity: 0.2});
+  $("#return_button").css("display", "none");
+}

@@ -669,7 +669,7 @@ footer a {
 
   .content {
     margin-bottom: 100px;
-    margin-top: -100px;
+    margin-top: -80px;
     background-color: #fff;
     border-top: 15px solid #EA2E49;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -932,4 +932,27 @@ body.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+
+
+/*
+=======================
+---- VR UI Style -----
+=======================
+*/
+
+.vr-ui {
+  position: absolute; 
+  z-index: 15;
+}
+
+#return { 
+  bottom: 2vmin;  
+  left: 2vmin;
+}
+
+#enterVR { 
+  bottom: 2vmin;  
+  right: 2vmin;
 }
