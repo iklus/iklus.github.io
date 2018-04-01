@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ivan Klus</title>
+    <meta name="description" content="Fireworks Demo">
+    <!--<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>-->
+    <script src="https://rawgit.com/ngokevin/aframe/animationbugless/dist/aframe-master.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.0.0-beta8/dist/aframe-animation-component.js"></script>
+    <script src="https://unpkg.com/aframe-animation-timeline-component/dist/aframe-animation-timeline-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene animation-timeline__1="timeline: #animTimeline; loop: true" cursor="rayOrigin: mouse" vr-mode-ui="enabled: false">
+      <a-assets>
+        <script id="treeTemplate" type="text/x-nunjucks-template">
+          <a-entity geometry="primitive:cylinder;radius:0.5;height:6;"
+            material="color:#89725B"
+            position="0 3 0"></a-entity>
+            <a-entity geometry="primitive:dodecahedron; radius:2.5;"
+            material="color:#677E52"
+            position="0 5 0"></a-entity>
+        </script>
+      </a-assets>
+
+      <!-- Animation Timeline -->
+      <a-timeline id="animTimeline">
+        <a-timeline-animation select="#firework" name="flyup"></a-timeline-animation>
+        <a-timeline-group>
+          <a-timeline-animation select="#firework" name="falldown"></a-timeline-animation>
+          <a-timeline-animation select="#box0" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box0" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box1" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box1" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box2" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box2" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box3" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box3" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box4" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box4" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box5" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box5" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box6" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box6" name="shrink"></a-timeline-animation>
+          <a-timeline-animation select="#box7" name="fly"></a-timeline-animation>
+          <a-timeline-animation select="#box7" name="shrink"></a-timeline-animation>
+        </a-timeline-group>
+        
+      </a-timeline>
+
+      <!-- Firework Animation Mixin -->
+      <a-mixin id="box"
+        height="1" width="1"
+        animation__shrink="autoplay: false; dir: to; loop: 0; dur: 3000; easing: linear; property: scale; to: 0 0 0"></a-box>
+      ></a-mixin>
+      <a-mixin id="groupAnim"
+        animation__flyup="autoplay: false; dir: to; loop: 0; dur: 1000; easing: easeOutQuad; property: position; startEvents: ; pauseEvents: ; resumeEvents: ; to: 0 11 -10; from: 0 1 -10"
+        animation__falldown="autoplay: false; dir: to; loop: 0; dur: 5000; easing: linear; property: position; startEvents: ; pauseEvents: ; resumeEvents: ; to: 0 1 -10; from: 0 11 -10"
+      ></a-mixin>
+
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#B7CA79"></a-plane>
+      <a-plane position="0 0.01 0" rotation="-90 0 0" width="1.5" height="100" color="#F6E8B1"></a-plane>
+      <a-sky color="cyan"></a-sky>
+
+
+
+      <a-entity id="firework" position="0 1 -10" mixin="groupAnim">
+        <a-box id="box0" position="0.5 -0.5 0.5" mixin="box" color="red"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: 3 -3 3"></a-box>
+        <a-box id="box1" position="0.5 -0.5 -0.5" mixin="box" color="orange"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: 3 -3 -3"></a-box>
+        <a-box id="box2" position="-0.5 -0.5 0.5" mixin="box" color="yellow"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: -3 -3 3"></a-box>
+        <a-box id="box3" position="-0.5 -0.5 -0.5" mixin="box" color="green"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: -3 -3 -3"></a-box>
+        <a-box id="box4" position="0.5 0.5 0.5" mixin="box" color="blue"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: 3 3 3"></a-box>
+        <a-box id="box5" position="0.5 0.5 -0.5" mixin="box" color="purple"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: 3 3 -3"></a-box>
+        <a-box id="box6" position="-0.5 0.5 0.5" mixin="box" color="white"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: -3 3 3"></a-box>
+        <a-box id="box7" position="-0.5 0.5 -0.5" mixin="box" color="black"
+          animation__fly="autoplay: false; dir: to; loop: 0; dur: 3000; easing: easeOutQuad; property: position; to: -3 3 -3"></a-box>
+      </a-entity>
+
+      <a-entity id="player" position="0 2 0" rotation="0 0 0">
+        <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
+        </a-entity>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
