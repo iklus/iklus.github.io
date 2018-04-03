@@ -93,7 +93,7 @@
       <a-entity id="player" position="0 2 0" rotation="0 0 0">
         <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
          <!-- Hub Menu UI -->
-         <a-entity id="menuBar1" headband="side:top;away:1;sections:5" material="shader:flat;color:#89725B;">
+         <a-entity id="menuBar1" headband="side:top;away:1;sections:5" material="shader:flat;color:#89725B;" visible="false">
           <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
           <a-image class="hb-2d-menu" src="#uc_logo" position="0 0 0.01" scale="0.6 0.2 1">
             <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="0.72 0.24 1"></a-animation>
@@ -116,7 +116,7 @@
               <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
             </a-entity>
           </a-entity>
-          <a-entity id="menuBar2" headband="side:bottom;away:1;sections:4;prefix:hb1" material="shader:flat;color:#89725B;">
+          <a-entity id="menuBar2" headband="side:bottom;away:1;sections:4;prefix:hb1" material="shader:flat;color:#89725B;" visible="false">
             <!--<a-image id="logo" class="hb-logo" src="#uc_logo"></a-image>-->
             <a-entity class="hb1-2d-menu" position="0 0 0.01" scale="1 1 1" geometry="primitive:plane;width:0.5;height:0.1" text="value:Wood;align:center;wrap-count:9;color:#F6E8B1;" material="opacity:0">
                 <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
@@ -148,7 +148,7 @@
         <a-entity hand-controls="right" sphere-collider="objects: .button, .switch;"></a-entity>
       </a-entity>
 
-      <a-entity id="headband-menu" scale="0.2 0.2 0.2" position="0 1.5 -1" headband-menu visible="false">
+      <a-entity id="headband-menu" scale="0.2 0.2 0.2" position="0 1.5 -1" headband-menu visible="true">
         <a-entity class="switches" position="0 -1.1 -1" rotation="-45 0 0">
           <!-- switch box -->
           <a-entity geometry="primitive: box; width: 3.5; height: 1.5; depth: 0.1" mixin="brown"></a-entity>
