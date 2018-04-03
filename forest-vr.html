@@ -227,23 +227,6 @@
 
     </a-scene>
 
-    <script>
-      document.querySelector('vrbutton').addEventListener("exit-vr", switchToVR());
-      function switchToVR() {
-        alert("worked");
-        var menu1 = document.getElementById("menubar1");
-        var menu2 = document.getElementById("menubar2");
-        menu1.setAttribute('visible', 'false');
-        menu2.setAttribute('visible', 'false');
-        document.querySelector('a-scene').enterVR();
-
-      }
-    
-    
-    
-    </script>
-
-
 
 
   </body>
